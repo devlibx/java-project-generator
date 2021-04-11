@@ -22,10 +22,10 @@ Configuration for creating project:
  mvn archetype:generate \
   -DarchetypeGroupId=io.github.devlibx.tools.java.maven \
   -DarchetypeArtifactId=project-generator \
-  -DarchetypeVersion=1.0.30-SNAPSHOT \
-  -DgroupId=com.harishb2k \
+  -DarchetypeVersion=2.0.0 \
+  -DgroupId=com.dummy \
   -DartifactId=dummy-project \
-  -Dpackage=com.harishb2k.pack \
+  -Dpackage=com.dummy.pack \
   -DinteractiveMode=false
 
 See "Known Issue" to reformat the generated pom.xml to remove extra spaces.
