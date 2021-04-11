@@ -1,0 +1,159 @@
+<archetype-descriptor
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0
+        https://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd"
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        name="quickstart">
+
+    <fileSets>
+        <fileSet filtered="true">
+            <directory>config</directory>
+            <includes>
+                <include>app.yml</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true">
+            <directory>config</directory>
+            <includes>
+                <include>run_local.sh</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+
+    <modules>
+
+        <module id="common" dir="common" name="common">
+            <fileSets>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet>
+                    <directory>src/test/java</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module id="core" dir="core" name="core">
+            <fileSets>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet>
+                    <directory>src/test/java</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module id="resources" dir="resources" name="resources">
+            <fileSets>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet>
+                    <directory>src/test/java</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module id="headers" dir="headers" name="headers">
+            <fileSets>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" packaged="false">
+                    <directory>src/main/proto</directory>
+                    <includes>
+                        <include>**/*.proto</include>
+                    </includes>
+                </fileSet>
+                <fileSet>
+                    <directory>src/test/java</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module id="app" dir="app" name="app">
+            <fileSets>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet>
+                    <directory>src/test/java</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module id="persistence" dir="persistence" name="persistence">
+            <fileSets>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/test/java</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module id="persistence-mysql" dir="persistence-mysql" name="persistence-mysql">
+            <fileSets>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/test/java</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module id="external-services" dir="external-services" name="external-services">
+            <fileSets>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/test/java</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module id="tests" dir="tests" name="tests">
+            <fileSets>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" packaged="true">
+                    <directory>src/test/java</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+
+    </modules>
+
+</archetype-descriptor>

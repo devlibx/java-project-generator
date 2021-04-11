@@ -1,0 +1,1 @@
+mvn -B clean install -Dtag=1.0.28 -Dmaven.test.skip=true release:prepare release:perform
