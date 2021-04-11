@@ -68,6 +68,7 @@
                     <release>8</release>
                 </configuration>
             </plugin>
+            <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -132,6 +133,7 @@
                     <tagNameFormat>{project.version}</tagNameFormat>
                 </configuration>
             </plugin>
+            -->
         </plugins>
     </build>
 
