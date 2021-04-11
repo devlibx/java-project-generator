@@ -52,7 +52,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <lombok.version>1.18.16</lombok.version>
-        <easy.version>0.0.49</easy.version>
+        <easy.version>0.0.50</easy.version>
     </properties>
     <dependencyManagement>
         <dependencies>
