@@ -11,7 +11,7 @@ This utility helps you to create a ready to run project with following:
 
 
 Generate Project
-====
+=====
 Configuration for creating project:
 
 1. groupId - your project group id

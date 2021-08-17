@@ -1,4 +1,4 @@
-mvn -B clean install -Dtag=2.0.2 -Dmaven.test.skip=true release:prepare release:perform -P release
+mvn -B clean install -Dtag=2.0.3 -Dmaven.test.skip=true release:prepare release:perform -P release
 
 # Rollback
 # mvn release:rollback
