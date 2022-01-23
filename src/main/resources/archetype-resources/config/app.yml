@@ -3,7 +3,7 @@ server:
   applicationContextPath: "/"
   adminContextPath: "/admin"
   connector:
-    port: 8089
+    port: 8080
     type: http
 
 logging:
@@ -16,9 +16,9 @@ mySqlConfigs:
   configs:
     default:
       driverClassName: "com.mysql.jdbc.Driver"
-      username: ${DEFAULT_DB_USER}
-      password: ${DEFAULT_DB_PASS}
-      jdbcUrl: jdbc:mysql://${DEFAULT_DB_HOST}:${DEFAULT_DB_PORT}/${DEFAULT_DB_NAME}?autoReconnect=true&characterEncoding=UTF-8&useSSL=false
+      username: ${DEFAULT_DB_USER:-test}
+        password: ${DEFAULT_DB_PASS:-test}
+        jdbcUrl: jdbc:mysql://${DEFAULT_DB_HOST:-localhost}:${DEFAULT_DB_PORT:-3306}/${DEFAULT_DB_NAME:-users}?autoReconnect=true&characterEncoding=UTF-8&useSSL=false
 
 easyHttpConfig:
   servers:
