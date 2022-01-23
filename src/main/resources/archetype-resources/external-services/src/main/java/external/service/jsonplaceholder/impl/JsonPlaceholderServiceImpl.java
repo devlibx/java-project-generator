@@ -1,3 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 package ${package}.external.service.jsonplaceholder.impl;
 
 import ${package}.external.service.jsonplaceholder.IJsonPlaceholderService;

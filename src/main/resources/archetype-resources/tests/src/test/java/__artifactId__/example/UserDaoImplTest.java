@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.persistence.mysql.dao;
+package ${package}.${artifactId}.example;
 
 import ${package}.persistence.dao.IUserDao;
 import ${package}.persistence.mysql.base.PersistenceMySqlBaseTestCase;

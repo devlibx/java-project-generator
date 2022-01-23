@@ -1,159 +1,221 @@
-<archetype-descriptor
-        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0
-        https://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd"
-        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        name="quickstart">
-
-    <fileSets>
-        <fileSet filtered="true">
-            <directory>config</directory>
-            <includes>
-                <include>app.yml</include>
-            </includes>
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xsi:schemaLocation="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 http://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd" name="dummy-project"
+    xmlns="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <fileSets>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>.idea/libraries</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>.idea/codeStyles</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>.idea</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>.idea</directory>
+      <includes>
+        <include>**/*.gitignore</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>config</directory>
+      <includes>
+        <include>**/*.sh</include>
+        <include>**/*.yml</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>README.md</include>
+        <include>dummy-project.iml</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+  <modules>
+    <module id="core" dir="core" name="core">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
         </fileSet>
-        <fileSet filtered="true">
-            <directory>config</directory>
-            <includes>
-                <include>run_local.sh</include>
-            </includes>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>core.iml</include>
+          </includes>
         </fileSet>
-    </fileSets>
-
-    <modules>
-
-        <module id="common" dir="common" name="common">
-            <fileSets>
-                <fileSet filtered="true" packaged="true">
-                    <directory>src/main/java</directory>
-                    <includes>
-                        <include>**/*.java</include>
-                    </includes>
-                </fileSet>
-                <fileSet>
-                    <directory>src/test/java</directory>
-                </fileSet>
-            </fileSets>
-        </module>
-
-        <module id="core" dir="core" name="core">
-            <fileSets>
-                <fileSet filtered="true" packaged="true">
-                    <directory>src/main/java</directory>
-                    <includes>
-                        <include>**/*.java</include>
-                    </includes>
-                </fileSet>
-                <fileSet>
-                    <directory>src/test/java</directory>
-                </fileSet>
-            </fileSets>
-        </module>
-
-        <module id="resources" dir="resources" name="resources">
-            <fileSets>
-                <fileSet filtered="true" packaged="true">
-                    <directory>src/main/java</directory>
-                    <includes>
-                        <include>**/*.java</include>
-                    </includes>
-                </fileSet>
-                <fileSet>
-                    <directory>src/test/java</directory>
-                </fileSet>
-            </fileSets>
-        </module>
-
-        <module id="headers" dir="headers" name="headers">
-            <fileSets>
-                <fileSet filtered="true" packaged="true">
-                    <directory>src/main/java</directory>
-                    <includes>
-                        <include>**/*.java</include>
-                    </includes>
-                </fileSet>
-                <fileSet filtered="true" packaged="false">
-                    <directory>src/main/proto</directory>
-                    <includes>
-                        <include>**/*.proto</include>
-                    </includes>
-                </fileSet>
-                <fileSet>
-                    <directory>src/test/java</directory>
-                </fileSet>
-            </fileSets>
-        </module>
-
-        <module id="app" dir="app" name="app">
-            <fileSets>
-                <fileSet filtered="true" packaged="true">
-                    <directory>src/main/java</directory>
-                    <includes>
-                        <include>**/*.java</include>
-                    </includes>
-                </fileSet>
-                <fileSet>
-                    <directory>src/test/java</directory>
-                </fileSet>
-            </fileSets>
-        </module>
-
-        <module id="persistence" dir="persistence" name="persistence">
-            <fileSets>
-                <fileSet filtered="true" packaged="true">
-                    <directory>src/main/java</directory>
-                    <includes>
-                        <include>**/*.java</include>
-                    </includes>
-                </fileSet>
-                <fileSet filtered="true" packaged="true">
-                    <directory>src/test/java</directory>
-                </fileSet>
-            </fileSets>
-        </module>
-
-        <module id="persistence-mysql" dir="persistence-mysql" name="persistence-mysql">
-            <fileSets>
-                <fileSet filtered="true" packaged="true">
-                    <directory>src/main/java</directory>
-                    <includes>
-                        <include>**/*.java</include>
-                    </includes>
-                </fileSet>
-                <fileSet filtered="true" packaged="true">
-                    <directory>src/test/java</directory>
-                </fileSet>
-            </fileSets>
-        </module>
-
-        <module id="external-services" dir="external-services" name="external-services">
-            <fileSets>
-                <fileSet filtered="true" packaged="true">
-                    <directory>src/main/java</directory>
-                    <includes>
-                        <include>**/*.java</include>
-                    </includes>
-                </fileSet>
-                <fileSet filtered="true" packaged="true">
-                    <directory>src/test/java</directory>
-                </fileSet>
-            </fileSets>
-        </module>
-
-        <module id="tests" dir="tests" name="tests">
-            <fileSets>
-                <fileSet filtered="true" packaged="true">
-                    <directory>src/main/java</directory>
-                    <includes>
-                        <include>**/*.java</include>
-                    </includes>
-                </fileSet>
-                <fileSet filtered="true" packaged="true">
-                    <directory>src/test/java</directory>
-                </fileSet>
-            </fileSets>
-        </module>
-
-    </modules>
-
+      </fileSets>
+    </module>
+    <module id="app" dir="app" name="app">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>dependency-reduced-pom.xml</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>app.iml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="common" dir="common" name="common">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>common.iml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="persistence" dir="persistence" name="persistence">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>persistence.iml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="persistence-mysql" dir="persistence-mysql" name="persistence-mysql">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>persistence-mysql.iml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="tests" dir="tests" name="tests">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>tests.iml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="resources" dir="resources" name="resources">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>resources.iml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="headers" dir="headers" name="headers">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8" filtered="true">
+          <directory>src/main/proto</directory>
+          <includes>
+            <include>**/*.proto</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>headers.iml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="external-services" dir="external-services" name="external-services">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>external-services.iml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+  </modules>
 </archetype-descriptor>
