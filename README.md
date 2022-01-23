@@ -118,6 +118,6 @@ Generate from Source
 ===
 If you want to generate this from soruce to customize then you can do from following:
 ```shell script
-git clone https://github.com/harishb2k/java-project-generator.git
+git clone https://github.com/devlibx/java-project-generator.git
 mvn clean install
 ```  
