@@ -42,6 +42,7 @@
         <maven.compiler.target>19</maven.compiler.target>
         <lombok.version>1.18.24</lombok.version>
         <easy.version>0.0.134.java19</easy.version>
+        <jersey.version>2.36</jersey.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -82,6 +83,17 @@
                 <groupId>io.github.devlibx.easy</groupId>
                 <artifactId>lock</artifactId>
                 <version>${easy.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.glassfish.jersey.core</groupId>
+                <artifactId>jersey-server</artifactId>
+                <version>${jersey.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.jersey.core</groupId>
+                <artifactId>jersey-common</artifactId>
+                <version>${jersey.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

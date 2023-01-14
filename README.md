@@ -22,7 +22,7 @@ Configuration for creating project:
  mvn archetype:generate \
   -DarchetypeGroupId=io.github.devlibx.tools.java.maven \
   -DarchetypeArtifactId=project-generator \
-  -DarchetypeVersion=2.0.5 \
+  -DarchetypeVersion= v2.0.8.java19 \
   -DgroupId=com.dummy \
   -DartifactId=dummy-project \
   -Dpackage=com.dummy.pack \
