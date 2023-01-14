@@ -32,6 +32,12 @@ import io.github.devlibx.easy.metrics.prometheus.PrometheusMetrics;
 public class RestApplication extends BaseApplication<ApplicationConfig> {
 
     public static void main(String[] args) throws Exception {
+        Thread.ofVirtual().start(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("java 19 working....");
+            }
+        });
         new RestApplication().run("server", args[0]);
     }
 
