@@ -28,6 +28,9 @@ Configuration for creating project:
   -Dpackage=com.dummy.pack \
   -DinteractiveMode=false
 
+NOTE: If you want to crate Java 19 project go to this link. You will get the correct command to generate.
+https://github.com/devlibx/java-project-generator/wiki/Java-19---Base-Project
+
 See "Known Issue" to reformat the generated pom.xml to remove extra spaces.
 >> cd <project>
 >> xmllint --format pom.xml > pom.new ; mv pom.new pom.xml
@@ -43,7 +46,7 @@ Modify Jdbc Url in following file:
 
 ```shell script
 CREATE DATABASE users;
-
+use users;
 CREATE TABLE `users` (
    `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
    `name` varchar(265) DEFAULT NULL,
