@@ -41,7 +41,7 @@
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
         <lombok.version>1.18.24</lombok.version>
-        <easy.version>0.0.134.java19</easy.version>
+        <easy.version>0.0.135.java19</easy.version>
         <jersey.version>2.36</jersey.version>
     </properties>
     <dependencyManagement>
