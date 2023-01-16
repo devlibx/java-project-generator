@@ -15,7 +15,7 @@ logging:
 mySqlConfigs:
   configs:
     default:
-      driverClassName: "com.mysql.jdbc.Driver"
+      driverClassName: "com.mysql.cj.jdbc.Driver"
       username: ${DEFAULT_DB_USER:-test}
       password: ${DEFAULT_DB_PASS:-test}
       jdbcUrl: jdbc:mysql://${DEFAULT_DB_HOST:-localhost}:${DEFAULT_DB_PORT:-3306}/${DEFAULT_DB_NAME:-users}?autoReconnect=true&characterEncoding=UTF-8&useSSL=false
