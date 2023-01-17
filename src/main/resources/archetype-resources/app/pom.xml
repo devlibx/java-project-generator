@@ -35,7 +35,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>2.3</version>
+                <version>3.2.1</version>
                 <configuration>
                     <createDependencyReducedPom>true</createDependencyReducedPom>
                     <filters>
@@ -60,6 +60,9 @@
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>${package}.app.RestApplication</mainClass>
+                                    <manifestEntries>
+                                        <Multi-Release>true</Multi-Release>
+                                    </manifestEntries>
                                 </transformer>
                             </transformers>
                         </configuration>

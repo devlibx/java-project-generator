@@ -14,7 +14,7 @@
     <plugins>
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>2.3</version>
+        <version>3.2.1</version>
         <executions>
           <execution>
             <phase>package</phase>
@@ -26,6 +26,9 @@
                 <transformer />
                 <transformer>
                   <mainClass>${package}.${artifactId}.RestApplication</mainClass>
+                  <manifestEntries>
+                    <Multi-Release>true</Multi-Release>
+                  </manifestEntries>
                 </transformer>
               </transformers>
             </configuration>
@@ -48,4 +51,3 @@
     </plugins>
   </build>
 </project>
-

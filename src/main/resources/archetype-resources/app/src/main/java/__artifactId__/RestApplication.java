@@ -17,6 +17,7 @@ import com.google.inject.Injector;
 import com.google.inject.Scopes;
 import io.dropwizard.core.setup.Environment;
 import io.gitbub.devlibx.easy.helper.ApplicationContext;
+import io.gitbub.devlibx.easy.helper.DoNotUse;
 import io.gitbub.devlibx.easy.helper.metrics.IMetrics;
 import io.github.devlibx.easy.${artifactId}.dropwizard.BaseApplication;
 import io.github.devlibx.easy.${artifactId}.dropwizard.healthcheck.ApplicationHealthCheck;
@@ -36,6 +37,7 @@ public class RestApplication extends BaseApplication<ApplicationConfig> {
             @Override
             public void run() {
                 System.out.println("java 19 working....");
+                System.out.println("This must be true if java 19 is running = " + DoNotUse.isJava19Enabled());
             }
         });
         new RestApplication().run("server", args[0]);
@@ -52,6 +54,7 @@ public class RestApplication extends BaseApplication<ApplicationConfig> {
     @Override
     public void run(ApplicationConfig ${artifactId}licationConfig, Environment environment) throws Exception {
         super.run(${artifactId}licationConfig, environment);
+
 
         // Project module
         AbstractModule module = new AbstractModule() {
