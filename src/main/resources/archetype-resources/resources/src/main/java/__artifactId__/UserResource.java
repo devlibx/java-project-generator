@@ -10,16 +10,16 @@ import ${package}.headers.pub.AddUserResponse;
 import ${package}.headers.pub.GetUserRequest;
 import ${package}.persistence.domain.User;
 import ${package}.${artifactId}.lock.ResourceWithLocking;
+import jakarta.ws.rs.Consumes;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.POST;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.inject.Inject;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 import java.util.Map;
 
 @Slf4j
@@ -46,6 +46,8 @@ public class UserResource {
 
     @POST
     public Response addUser(AddUserRequest request) {
+        log.info("Using virtual Thread = " + Thread.currentThread().isVirtual());
+        
         User user = User.builder().name(request.getName()).build();
         userService.persist(user);
 
@@ -69,4 +71,5 @@ public class UserResource {
         Map<String, Object> result = resourceWithLocking.methodWhichShouldBeLocked(request.getName());
         return Response.ok(request).build();
     }
+
 }

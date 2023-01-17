@@ -4,7 +4,7 @@
 package ${package}.${artifactId}.config;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import io.dropwizard.Configuration;
+import io.dropwizard.core.Configuration;
 import io.github.devlibx.easy.database.mysql.config.MySqlConfigs;
 import io.github.devlibx.easy.http.config.Config;
 import io.github.devlibx.easy.lock.config.LockConfigs;

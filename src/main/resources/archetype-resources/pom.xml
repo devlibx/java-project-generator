@@ -7,22 +7,22 @@
     <packaging>pom</packaging>
     <name>${artifactId}</name>
     <!-- You must update and uncomment the following if you want to release this to Github
-                           NOTE - Never publishing you artifacts to GitHub (Check you company Policy)
-                      <url>YOUR PROJECT URL</url>
-                      <description>YOUR PROJECT DESCRIPTION</description>
-                      <scm>
-                          <connection>scm:git:git://github.com/xyz/abc_git_project.git</connection>
-                          <developerConnection>scm:git:ssh://github.com:xyz/abc_git_project.git</developerConnection>
-                          <url>https://github.com/xyz/abc_git_project/tree/master</url>
-                      </scm>
-                      <licenses>
-                          <license>
-                              <name>Apache License, Version 2.0</name>
-                              <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-                              <distribution>repo</distribution>
-                          </license>
-                      </licenses>
-                      -->
+                             NOTE - Never publishing you artifacts to GitHub (Check you company Policy)
+                        <url>YOUR PROJECT URL</url>
+                        <description>YOUR PROJECT DESCRIPTION</description>
+                        <scm>
+                            <connection>scm:git:git://github.com/xyz/abc_git_project.git</connection>
+                            <developerConnection>scm:git:ssh://github.com:xyz/abc_git_project.git</developerConnection>
+                            <url>https://github.com/xyz/abc_git_project/tree/master</url>
+                        </scm>
+                        <licenses>
+                            <license>
+                                <name>Apache License, Version 2.0</name>
+                                <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+                                <distribution>repo</distribution>
+                            </license>
+                        </licenses>
+                        -->
     <!-- You can remove it if you need to -->
     <repositories>
         <repository>
@@ -41,8 +41,8 @@
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
         <lombok.version>1.18.24</lombok.version>
-        <easy.version>0.0.136.java19</easy.version>
-        <jersey.version>2.36</jersey.version>
+        <easy.version>0.0.138.java19.loom</easy.version>
+        <jersey.version>3.0.8</jersey.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -84,7 +84,6 @@
                 <artifactId>lock</artifactId>
                 <version>${easy.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.glassfish.jersey.core</groupId>
                 <artifactId>jersey-server</artifactId>
@@ -176,25 +175,25 @@
         </profile>
     </profiles>
     <!-- You must uncomment the following if you want to release this to Github
-                           NOTE - Never publishing you artifacts to Maven Central Repository or GitHub (Check you company Policy)
+                             NOTE - Never publishing you artifacts to Maven Central Repository or GitHub (Check you company Policy)
 
-                      <distributionManagement>
-                          <repository>
-                              <id>ossrh</id>
-                              <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-                          </repository>
-                          <snapshotRepository>
-                              <id>ossrh</id>
-                              <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-                          </snapshotRepository>
-                      </distributionManagement>
-                      <developers>
-                          <developer>
-                              <name>Your Name</name>
-                              <email>Your Org Name</email>
-                              <organization>Sonatype</organization>
-                              <organizationUrl>Your Org URL</organizationUrl>
-                          </developer>
-                      </developers>
-                      -->
+                        <distributionManagement>
+                            <repository>
+                                <id>ossrh</id>
+                                <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+                            </repository>
+                            <snapshotRepository>
+                                <id>ossrh</id>
+                                <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                            </snapshotRepository>
+                        </distributionManagement>
+                        <developers>
+                            <developer>
+                                <name>Your Name</name>
+                                <email>Your Org Name</email>
+                                <organization>Sonatype</organization>
+                                <organizationUrl>Your Org URL</organizationUrl>
+                            </developer>
+                        </developers>
+                        -->
 </project>

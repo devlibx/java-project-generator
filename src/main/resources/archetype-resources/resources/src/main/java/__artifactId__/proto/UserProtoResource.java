@@ -7,13 +7,13 @@ import ${package}.headers.pub.proto.pojo.SampleRequest;
 import ${package}.headers.pub.proto.pojo.SampleResponse;
 import lombok.extern.slf4j.Slf4j;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.DefaultValue;
-import javax.ws.rs.HeaderParam;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.Response;
+import jakarta.ws.rs.Consumes;
+import jakarta.ws.rs.DefaultValue;
+import jakarta.ws.rs.HeaderParam;
+import jakarta.ws.rs.POST;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.Response;
 
 @Slf4j
 @Path("/api/v2/user")

@@ -4,10 +4,6 @@
 package ${package}.${artifactId};
 
 import com.codahale.metrics.MetricRegistry;
-import com.google.inject.AbstractModule;
-import com.google.inject.Guice;
-import com.google.inject.Injector;
-import com.google.inject.Scopes;
 import ${package}.${artifactId}.config.ApplicationConfig;
 import ${package}.core.module.CoreModule;
 import ${package}.external.module.ExternalServicesModule;
@@ -15,7 +11,11 @@ import ${package}.persistence.module.PersistenceModule;
 import ${package}.persistence.mysql.module.PersistenceMySqlModule;
 import ${package}.resources.UserResource;
 import ${package}.resources.proto.UserProtoResource;
-import io.dropwizard.setup.Environment;
+import com.google.inject.AbstractModule;
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import com.google.inject.Scopes;
+import io.dropwizard.core.setup.Environment;
 import io.gitbub.devlibx.easy.helper.ApplicationContext;
 import io.gitbub.devlibx.easy.helper.metrics.IMetrics;
 import io.github.devlibx.easy.${artifactId}.dropwizard.BaseApplication;
