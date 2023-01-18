@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>${groupId}</groupId>
-    <artifactId>${artifactId}</artifactId>
-    <version>${version}</version>
-    <packaging>pom</packaging>
-    <name>${artifactId}</name>
-    <!-- You must update and uncomment the following if you want to release this to Github
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>${groupId}</groupId>
+  <artifactId>${artifactId}</artifactId>
+  <version>${version}</version>
+  <packaging>pom</packaging>
+  <name>${artifactId}</name>
+  <!-- You must update and uncomment the following if you want to release this to Github
                            NOTE - Never publishing you artifacts to GitHub (Check you company Policy)
                       <url>YOUR PROJECT URL</url>
                       <description>YOUR PROJECT DESCRIPTION</description>
@@ -23,144 +23,144 @@
                           </license>
                       </licenses>
                       -->
-    <!-- You can remove it if you need to -->
-    <repositories>
-        <repository>
-            <id>snapshots-repo</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
+  <!-- You can remove it if you need to -->
+  <repositories>
+    <repository>
+      <id>snapshots-repo</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
             </snapshots>
-        </repository>
-    </repositories>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <lombok.version>1.18.16</lombok.version>
-        <easy.version>0.0.76</easy.version>
-    </properties>
-    <dependencyManagement>
-        <dependencies>
-            <!-- Easy Pom to provide all dependency versions -->
-            <dependency>
-                <groupId>io.github.devlibx.easy</groupId>
-                <artifactId>easy</artifactId>
-                <version>${easy.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>io.github.devlibx.easy</groupId>
-                <artifactId>helper</artifactId>
-                <version>${easy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.devlibx.easy</groupId>
-                <artifactId>database</artifactId>
-                <version>${easy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.devlibx.easy</groupId>
-                <artifactId>database-mysql</artifactId>
-                <version>${easy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.devlibx.easy</groupId>
-                <artifactId>dropwizard-app</artifactId>
-                <version>${easy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.devlibx.easy</groupId>
-                <artifactId>http</artifactId>
-                <version>${easy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.devlibx.easy</groupId>
-                <artifactId>lock</artifactId>
-                <version>${easy.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-    <build>
+    </repository>
+  </repositories>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <lombok.version>1.18.16</lombok.version>
+    <easy.version>0.0.137</easy.version>
+  </properties>
+  <dependencyManagement>
+    <dependencies>
+      <!-- Easy Pom to provide all dependency versions -->
+      <dependency>
+        <groupId>io.github.devlibx.easy</groupId>
+        <artifactId>easy</artifactId>
+        <version>${easy.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>io.github.devlibx.easy</groupId>
+        <artifactId>helper</artifactId>
+        <version>${easy.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.github.devlibx.easy</groupId>
+        <artifactId>database</artifactId>
+        <version>${easy.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.github.devlibx.easy</groupId>
+        <artifactId>database-mysql</artifactId>
+        <version>${easy.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.github.devlibx.easy</groupId>
+        <artifactId>dropwizard-app</artifactId>
+        <version>${easy.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.github.devlibx.easy</groupId>
+        <artifactId>http</artifactId>
+        <version>${easy.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.github.devlibx.easy</groupId>
+        <artifactId>lock</artifactId>
+        <version>${easy.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+          <fork>true</fork>
+          <annotationProcessorPaths>
+            <path>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+              <version>${lombok.version}</version>
+            </path>
+          </annotationProcessorPaths>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <profiles>
+    <profile>
+      <id>release</id>
+      <build>
         <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <fork>true</fork>
-                    <annotationProcessorPaths>
-                        <path>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                            <version>${lombok.version}</version>
-                        </path>
-                    </annotationProcessorPaths>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-    <profiles>
-        <profile>
-            <id>release</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <artifactId>maven-compiler-plugin</artifactId>
-                        <version>3.8.1</version>
-                        <configuration>
-                            <release>8</release>
-                            <fork>true</fork>
-                        </configuration>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <version>2.2.1</version>
-                        <executions>
+          <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version>
+            <configuration>
+              <release>8</release>
+              <fork>true</fork>
+            </configuration>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>2.2.1</version>
+            <executions>
                             <execution>
                                 <id>attach-sources</id>
                                 <goals>
                                     <goal>jar</goal>
                                 </goals>
                             </execution>
-                        </executions>
-                    </plugin>
-                    <!-- NOTE - Comment following plugin if you are not releasing to Maven Central Repository -->
-                    <plugin>
-                        <groupId>org.sonatype.plugins</groupId>
-                        <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version>1.6.7</version>
-                        <extensions>true</extensions>
-                        <configuration>
-                            <serverId>ossrh</serverId>
-                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                        </configuration>
-                    </plugin>
-                    <!-- NOTE - Comment following plugin if you are not releasing to Maven Central Repository -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.5</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
+            </executions>
+          </plugin>
+          <!-- NOTE - Comment following plugin if you are not releasing to Maven Central Repository -->
+          <plugin>
+            <groupId>org.sonatype.plugins</groupId>
+            <artifactId>nexus-staging-maven-plugin</artifactId>
+            <version>1.6.7</version>
+            <extensions>true</extensions>
+            <configuration>
+              <serverId>ossrh</serverId>
+              <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+              <autoReleaseAfterClose>true</autoReleaseAfterClose>
+            </configuration>
+          </plugin>
+          <!-- NOTE - Comment following plugin if you are not releasing to Maven Central Repository -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.5</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
                                 <goals>
                                     <goal>sign</goal>
                                 </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
-    <!-- You must uncomment the following if you want to release this to Github
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+  <!-- You must uncomment the following if you want to release this to Github
                            NOTE - Never publishing you artifacts to Maven Central Repository or GitHub (Check you company Policy)
 
                       <distributionManagement>
