@@ -15,7 +15,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.dummy</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>headers</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -24,7 +24,7 @@
             <artifactId>http</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.dummy</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>core</artifactId>
             <version>${project.version}</version>
         </dependency>

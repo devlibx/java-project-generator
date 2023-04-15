@@ -15,17 +15,17 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.dummy</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>core</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.dummy</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>common</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.dummy</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>persistence-mysql</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -35,14 +35,14 @@
         </dependency>
 
         <dependency>
-            <groupId>com.dummy</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>persistence</artifactId>
             <version>${project.version}</version>
             <scope>test</scope>
             <classifier>tests</classifier>
         </dependency>
         <dependency>
-            <groupId>com.dummy</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>persistence-mysql</artifactId>
             <version>${project.version}</version>
             <scope>test</scope>
