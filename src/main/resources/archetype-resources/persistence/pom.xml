@@ -11,7 +11,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.dummy</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>common</artifactId>
             <version>${project.version}</version>
         </dependency>

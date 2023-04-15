@@ -15,17 +15,17 @@
             <artifactId>dropwizard-app</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.dummy</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>core</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.dummy</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>persistence-mysql</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.dummy</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>resources</artifactId>
             <version>${project.version}</version>
         </dependency>

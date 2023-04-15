@@ -14,3 +14,5 @@ rm -rf ./src/main/resources/archetype-resources/dependency-reduced-pom.xml
 rm -rf ./src/main/resources/archetype-resources/*.iml
 rm -rf ./src/main/resources/archetype-resources/*.ipr
 rm -rf ./src/main/resources/archetype-resources/*.iws
+
+find ./src/main/resources -type f -name pom.xml -exec sed -i '' 's/<groupId>com.dummy<\/groupId>/<groupId>${groupId}<\/groupId>/g' {} \;
